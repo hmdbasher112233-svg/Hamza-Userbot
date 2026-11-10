@@ -1,5 +1,5 @@
 """
-سورس حمزة | يوزربوت تيليثون
+سورس 𝑯𝒔𝒕𝒉𝒐𝒏 | يوزربوت تيليثون
 كل شيء في ملف واحد | تخزين JSON | بدون بوت خارجي | بدون قواعد بيانات
 """
 
@@ -100,7 +100,7 @@ def load_config():
     cfg["OWNER_NAME"] = cfg.get("OWNER_NAME") or "حمزة"
     if not cfg["API_ID"] or not cfg["API_HASH"]:
         print("=" * 45)
-        print("  إعداد سورس حمزة — أدخل بياناتك:")
+        print("  إعداد سورس 𝑯𝑺𝑻𝑯𝑶𝑵  — أدخل بياناتك:")
         print("=" * 45)
         try:
             aid = input("* API_ID: ").strip()
@@ -380,7 +380,7 @@ def readable_time(seconds):
 
 
 
-MENU_MAIN = f"""✦ ────『قـائـمـة اوامر سورس حـمـزة』──── ✦
+MENU_MAIN = f"""✦ ────『قـائـمـة اوامر سورس 𝑯𝑺𝑻𝑯𝑶𝑵 』──── ✦
 مرحبا بك عزيزي {OWNER_NAME}
 
 • `{PREFIX}م1` ➪ اوامـر الاداره
@@ -1194,7 +1194,7 @@ async def _locked_watcher(event):
 
 
 PM_WARN_TEXT = (
-    f"**| حماية الخاص — سورس حمزة**\n\n"
+    f"**| حماية الخاص — سورس 𝑯𝑺𝑻𝑯𝑶𝑵**\n\n"
     "هذا حساب محمي، انتظر موافقة صاحب الحساب.\n"
     "تكرار الرسائل سيؤدي لحظرك."
 )
@@ -2922,7 +2922,7 @@ SOURCE_INFO_PATH = os.path.join(DATA_DIR, "source_info.txt")
 def build_source_info():
     """يولّد ملف دليل السورس من قائمة الأوامر MENU + شرح عام"""
     lines = [
-        "=== دليل سورس حمزة (Hamza Userbot) ===",
+        "=== دليل سورس 𝑯STHON (𝑯𝑺𝑻𝑯𝑶𝑵  Userbot) ===",
         "",
         "نظرة عامة:",
         f"- سورس يوزربوت يعمل على حساب شخصي (Telethon) باسم '{OWNER_NAME}'.",
@@ -3440,7 +3440,7 @@ async def ai_ask(question, event=None, owner_chat=False, with_tools=False):
     source_info = load_source_info()
     parts = [f"[تعليمات النظام]\n{system}"]
     if source_info:
-        parts.append(f"[دليل سورس حمزة — كل ما يجب أن تعرفه عن السورس]\n{source_info}")
+        parts.append(f"[دليل سورس 𝑯𝑺𝑻𝑯𝑶𝑵  — كل ما يجب أن تعرفه عن السورس]\n{source_info}")
     if context:
         parts.append(f"[سياق المحادثة السابقة — آخر {AI_CONTEXT_LIMIT} رسالة]\n{context}")
     if memory:
@@ -3818,7 +3818,7 @@ async def _(event):
     if not arg:
         up = readable_time(time.time() - START_TIME)
         me = await event.client.get_me()
-        txt = f"""**[ سورس حمزة ]**
+        txt = f"""**[ سورس 𝑯𝑺𝑻𝑯𝑶𝑵  ]**
 =========================
 
 **الحالة:** يعمل ✓
@@ -5134,7 +5134,7 @@ async def _startup():
     is_premium = getattr(me, "premium", False)
     flood_guard = TextFloodGuard(is_premium=is_premium)
     print("=" * 45)
-    print(f"  سورس حمزة يعمل الآن ✓")
+    print(f"  سورس 𝑯𝑺𝑻𝑯𝑶𝑵  يعمل الآن ✓")
     print(f"  الحساب: {get_display_name(me)} | {me.id}")
     print(f"  البادئة: {PREFIX} | أرسل {PREFIX}الاوامر")
     print(f"  تركيبات السب: {insult_combos():,}")
